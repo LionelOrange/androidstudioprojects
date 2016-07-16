@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/table_view_rectangle"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    tools:showIn="@layout/fragment_discover">
+
+    <TableRow
+        android:weightSum="2">
+
+        <Button
+            android:drawableLeft="@drawable/category_icon_shopping"
+            android:text="购物车"
+            style="@style/CategoryButton"
+            />
+
+        <View
+            style="@style/VerticalDivider"
+            />
+
+        <Button
+            android:drawableLeft="@drawable/category_icon_sale"
+            android:text="优惠资源"
+            style="@style/CategoryButton"
+            />
+    </TableRow>
+
+    <View
+        style="@style/HorizontalDivider"/>
+
+    <TableRow
+        android:weightSum="2"
+        >
+
+        <LinearLayout
+            style="@style/Category">
+
+
+            <Button
+                android:text="教学文档"
+                android:drawableLeft="@drawable/fragment_category_dot_1"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="教学视频"
+                android:drawableLeft="@drawable/fragment_category_dot_1"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="电子书"
+                android:drawableLeft="@drawable/fragment_category_dot_1"
+                style="@style/SmallCategoryButton"
+                />
+
+        </LinearLayout>
+
+        <View
+            style="@style/VerticalDivider"
+            />
+
+        <LinearLayout
+            style="@style/Category">
+
+
+            <Button
+                android:text="壁纸"
+                android:drawableLeft="@drawable/fragment_category_dot_2"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="头像"
+                android:drawableLeft="@drawable/fragment_category_dot_2"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="表情"
+                android:drawableLeft="@drawable/fragment_category_dot_2"
+                style="@style/SmallCategoryButton"
+                />
+
+        </LinearLayout>
+
+    </TableRow>
+
+    <View
+        style="@style/HorizontalDivider"/>
+
+
+    <TableRow
+        android:weightSum="2"
+        >
+
+        <LinearLayout
+            style="@style/Category">
+
+
+            <Button
+                android:text="语文"
+                android:drawableLeft="@drawable/fragment_category_dot_3"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="数学"
+                android:drawableLeft="@drawable/fragment_category_dot_3"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="英语"
+                android:drawableLeft="@drawable/fragment_category_dot_3"
+                style="@style/SmallCategoryButton"
+                />
+
+        </LinearLayout>
+
+        <View
+            style="@style/VerticalDivider"
+            />
+
+        <LinearLayout
+            style="@style/Category">
+
+
+            <Button
+                android:text="物理"
+                android:drawableLeft="@drawable/fragment_category_dot_4"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="化学"
+                android:drawableLeft="@drawable/fragment_category_dot_4"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="生物"
+                android:drawableLeft="@drawable/fragment_category_dot_4"
+                style="@style/SmallCategoryButton"
+                />
+
+        </LinearLayout>
+
+    </TableRow>
+
+    <View
+        style="@style/HorizontalDivider"/>
+
+    <TableRow
+        android:weightSum="2"
+        >
+
+        <LinearLayout
+            style="@style/Category">
+
+
+            <Button
+                android:text="计算机"
+                android:drawableLeft="@drawable/fragment_category_dot_5"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="建筑工程"
+                android:drawableLeft="@drawable/fragment_category_dot_5"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="会计"
+                android:drawableLeft="@drawable/fragment_category_dot_5"
+                style="@style/SmallCategoryButton"
+                />
+
+        </LinearLayout>
+
+        <View
+            style="@style/VerticalDivider"
+            />
+
+        <LinearLayout
+            style="@style/Category">
+
+
+            <Button
+                android:text="教育专家"
+                android:drawableLeft="@drawable/fragment_category_dot_1"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="城市教师"
+                android:drawableLeft="@drawable/fragment_category_dot_1"
+                style="@style/SmallCategoryButton"
+                />
+
+            <Button
+                android:text="农村教师"
+                android:drawableLeft="@drawable/fragment_category_dot_1"
+                style="@style/SmallCategoryButton"
+                />
+
+        </LinearLayout>
+
+    </TableRow>
+</TableLayout>

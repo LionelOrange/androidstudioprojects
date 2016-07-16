@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Button
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:text="播放PPT"
+	android:id="@+id/start"
+	/>
+	
+	<Button
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:text="退出PPT"
+	android:id="@+id/escape"
+	/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="\n\n\n\n"
+    /> 
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+	<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="27dip"
+    android:text="    "
+    /> 
+	<Button
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="上一张"
+	android:id="@+id/back"
+	android:background="@drawable/left" />
+
+		<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="27dip"
+    android:text="          "
+    />
+
+		<Button
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="下一张"
+	android:id="@+id/froward"
+	android:background="@drawable/right"
+	/>
+
+	</LinearLayout>
+
+	<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="167dp"
+        android:gravity="center_horizontal">
+
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PC的IP地址："
+            android:id="@+id/textView"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp" />
+
+		<EditText
+    android:layout_width="148dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/ipaddr"
+			android:layout_gravity="center_vertical" />
+
+		<Button
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:text="连接"
+            android:id="@+id/connection"
+            android:layout_gravity="center_vertical" />
+	</LinearLayout>
+</LinearLayout>
