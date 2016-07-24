@@ -19,6 +19,8 @@ public class DBService {
         db.execSQL("insert into question(question,answerA,answerB,answerC,answerD,answer,explaination)" +
                 "values(?,?,?,?,?,?,?)",new String[]{"狗有几条尾巴","1条","2条","3条","4条","0"
                   ,"笨蛋"});
+        db.execSQL("insert into question(question,answerA,answerB,answerC,answerD,answer,explaination)" +
+                "values(?,?,?,?,?,?,?)",new String[]{"1+1=?","1","2","3","4","1","sha"});
     }
     public List<Question> getQuestions(){
         List<Question> list=new ArrayList<Question>();
