@@ -12,7 +12,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="dati"
+        android:text="答题"
         android:id="@+id/button"
         android:layout_marginTop="133dp"
         android:layout_alignParentTop="true"

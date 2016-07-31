@@ -54,7 +54,7 @@
         android:orientation="horizontal"
         android:layout_weight="7">
         <Button
-            android:text="previous"
+            android:text="上一步"
             android:id="@+id/btn_previous"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -64,6 +64,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="next"/>
+            android:text="下一步"/>
     </LinearLayout>
 </LinearLayout>

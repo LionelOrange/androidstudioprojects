@@ -17,10 +17,19 @@ public class DBService {
         dbHelper=new MyDatabaseHelper(mContext,"question.db",null,1);
         db=dbHelper.getWritableDatabase();
         db.execSQL("insert into question(question,answerA,answerB,answerC,answerD,answer,explaination)" +
-                "values(?,?,?,?,?,?,?)",new String[]{"狗有几条尾巴","1条","2条","3条","4条","0"
-                  ,"笨蛋"});
+                "values(?,?,?,?,?,?,?)",new String[]{"下面关于java.lang.Exception类的说法正确的是（）","继承自Throwable"
+                ,"Serialable ","不记得","反正不正确","0"
+                  ,"Java异常的基类为java.lang.Throwable，java.lang.Error和java.lang.Exception继承 Throwable，RuntimeException和" +
+                "其它的Exception等继承Exception，具体的RuntimeException继承RuntimeException。"});
         db.execSQL("insert into question(question,answerA,answerB,answerC,answerD,answer,explaination)" +
-                "values(?,?,?,?,?,?,?)",new String[]{"1+1=?","1","2","3","4","1","sha"});
+                "values(?,?,?,?,?,?,?)",new String[]{"下列说法正确的有（）","class中的constructor不可省略","constructor必须与class同名，但方法不能与class同名","constructor在一个对象被new时执行"
+                ,"一个class只能定义一个constructor","2","这里可能会有误区，其实普通的类方法是可以和类名同名的，和构造方法唯一的区分就是，构造方法没有返回值。"});
+        db.execSQL("insert into question(question,answerA,answerB,answerC,answerD,answer,explaination)" +
+                "values(?,?,?,?,?,?,?)",new String[]{"下列属于关系型数据库的是（）"," Oracle"," MySql","IMS","MongoDB"
+                ,"0","非关系型数据库有MongoDB、memcachedb、Redis等"});
+        db.execSQL("insert into question(question,answerA,answerB,answerC,answerD,answer,explaination)" +
+                "values(?,?,?,?,?,?,?)",new String[]{"下列说法正确的是（）","LinkedList继承自List","AbstractSet继承自Set","HashSet继承自AbstractSet","WeakMap继承自HashMap"
+                ,"0","HashSet继承自AbstractSet,也是"});
     }
     public List<Question> getQuestions(){
         List<Question> list=new ArrayList<Question>();
