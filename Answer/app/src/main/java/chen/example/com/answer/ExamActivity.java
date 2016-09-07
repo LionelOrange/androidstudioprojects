@@ -77,7 +77,7 @@ public class ExamActivity extends AppCompatActivity{
                 }
                 else {
                     final List<Integer> wrongList=checkAnswer(list);
-                    if (wrongList==null){
+                    if (wrongList.size()==0){
                         new AlertDialog.Builder(ExamActivity.this)
                                 .setTitle("提示")
                                 .setMessage("恭喜你全部回答正确！")
@@ -88,42 +88,43 @@ public class ExamActivity extends AppCompatActivity{
                                     }
                                 })
                                 .show();
+                    }else {
+                        new AlertDialog.Builder(ExamActivity.this)
+                                .setTitle("提示")
+                                .setMessage("你答对了"+(list.size()-wrongList.size())+
+                                        "道题目，答错了"+wrongList.size()+"道题目.是否查看错题？")
+                                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        wrongMode=true;
+                                        List<Question> newList=new ArrayList<Question>();
+                                        for (int i=0;i<wrongList.size();i++){
+                                            newList.add(list.get(wrongList.get(i)));
+                                        }
+                                        list.clear();
+                                        for (int i=0;i<newList.size();i++){
+                                            list.add(newList.get(i));
+                                        }
+                                        current=0;
+                                        count=list.size();
+                                        Question q=list.get(current);
+                                        tv_question.setText(q.question);
+                                        radioButtons[0].setText(q.answerA);
+                                        radioButtons[1].setText(q.answerB);
+                                        radioButtons[2].setText(q.answerC);
+                                        radioButtons[3].setText(q.answerD);
+                                        tv_explaination.setText(q.explaination);
+                                        tv_explaination.setVisibility(View.VISIBLE);
+                                    }
+                                })
+                                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        ExamActivity.this.finish();
+                                    }
+                                })
+                                .show();
                     }
-                    new AlertDialog.Builder(ExamActivity.this)
-                            .setTitle("提示")
-                            .setMessage("你答对了"+(list.size()-wrongList.size())+
-                            "道题目，答错了"+wrongList.size()+"道题目.是否查看错题？")
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    wrongMode=true;
-                                    List<Question> newList=new ArrayList<Question>();
-                                    for (int i=0;i<wrongList.size();i++){
-                                        newList.add(list.get(wrongList.get(i)));
-                                    }
-                                    list.clear();
-                                    for (int i=0;i<newList.size();i++){
-                                        list.add(newList.get(i));
-                                    }
-                                    current=0;
-                                    count=list.size();
-                                    Question q=list.get(current);
-                                    tv_question.setText(q.question);
-                                    radioButtons[0].setText(q.answerA);
-                                    radioButtons[1].setText(q.answerB);
-                                    radioButtons[2].setText(q.answerC);
-                                    radioButtons[3].setText(q.answerD);
-                                    tv_explaination.setText(q.explaination);
-                                    tv_explaination.setVisibility(View.VISIBLE);
-                                }
-                            })
-                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    ExamActivity.this.finish();
-                                }
-                            })
-                            .show();
                 }
             }
         });
